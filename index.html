@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voice control Google API JS</title>
+	<!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />-->
+	<link rel="stylesheet" type="text/css" href="./css/sans.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<style>
+		video, canvas { position: absolute; top: 0; right: 0; }
+	</style>
+</head>
+<body>
+	<header>
+		<div id="display">
+			<div id="status"><img id="statusDisplay" src="" /></div>
+			<div id="time"></div>
+			<video id="capture" width="280" height="200" preload autoplay loop muted></video>
+			<canvas id="canvas" width="280" height="200"></canvas>
+		</div>
+	</header>
+
+	<section>
+		<div>
+			<span><h1></h1><h3></h3></span>
+		</div>
+	</section>
+
+	<footer>
+		<ul id="commands">
+			
+		</ul>
+	</footer>
+
+	<script src="./js/jquery-3.2.0.min.js"></script>
+
+    <script src="./js/trackingjs/tracking-min.js"></script>
+  	<script src="./js/trackingjs/data/face-min.js"></script>
+  	<script src="./js/facedetection.js"></script>
+
+	<script src="./js/json.js"></script>
+
+	<script src="./js/settings.js"></script>
+	<script src="./js/ApexBot.js"></script>
+
+	<script src="./js/init_voice.js"></script>
+	<script src="./js/custom_voice.js"></script>
+
+	<script src="./js/script.js"></script>
+</body>
+</html>
