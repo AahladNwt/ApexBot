@@ -76,5 +76,3 @@ axbt_.addCommand(['thanks', 'thank you', 'alright', 'I\'ll keep that in mind', '
 		State.Home = true;
 	}	
 });
-
-axbt_.displaySettings();
