@@ -85,9 +85,9 @@ var ApexSettings =
 		},
 		Message : {
 			Opening : {
-				Morning: ['Good morning.', 'Good morning, today will be a great day!', 'Good morning Timothy.'],
-				Afternoon: ['Good afternoon.', 'Good afternoon Timothy.'],
-				Evening: ['Good evening.', 'Good evening Timothy.'],
+				Morning: ['Good morning.', 'Good morning, today will be a great day!', 'Good morning human.'],
+				Afternoon: ['Good afternoon.', 'Good afternoon human.'],
+				Evening: ['Good evening.', 'Good evening human.'],
 			},
 			Closing : {
 				Morning: ['Goodbye.', 'Goodbye, have a great day!'],
