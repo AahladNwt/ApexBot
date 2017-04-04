@@ -54,7 +54,7 @@ axbt_.addCommand(['weather', 'what is the current weather', 'current weather'], 
 axbt_.addCommand(['inspire', 'inspire me', 'give me a quote', 'tell me a quote'], function() {
 	if (State.BotActive) 
 	{
-		var API_LINK_QUOTE_OF_THE_DAY = 'http://quotes.rest/qod.json?category=inspire';
+		var API_LINK_QUOTE_OF_THE_DAY = 'https://quotes.rest/qod.json?category=inspire';
 
 		axbt_.getJSON(API_LINK_QUOTE_OF_THE_DAY, function(err, data) {
 		  	if (data != null)
