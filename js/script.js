@@ -4,15 +4,18 @@ var axbt_ = new ApexBot();
 // Feed Apex information.
 axbt_.loadSettings(ApexSettings);
 
+// Unleash Apex
+axbt_.start();
+
 // Learn Apex some commands & tricks.
 axbt_.addCommand(['be quiet', 'quiet please', 'be quiet please'], function() {
 	if (State.BotActive) 
 	{
 		if(State.SpeakingAllowed) {
 			State.SpeakingAllowed = false;
-			talk('I will be quiet from now on.');
+			axbt_.talk('I will be quiet from now on.');
 		}
-		else talk('I\'m quiet already!');
+		else axbt_.talk('I\'m quiet already!');
 	}
 });
 
@@ -21,9 +24,9 @@ axbt_.addCommand(['you can talk', 'you can speak', 'you may talk', 'you may spea
 	{
 		if(!State.SpeakingAllowed) {
 			State.SpeakingAllowed = true;
-			talk('Thank you.');
+			axbt_.talk('Thank you.');
 		}
-		else talk('I\'m speaking already?');
+		else axbt_.talk('I\'m speaking already?');
 	}
 });
 
@@ -32,24 +35,32 @@ axbt_.addCommand('sleep', function() {
 	State.BotActive = false;
 });
 
-/*axbt_.addCommand(['weather', 'what is the current weather', 'current weather'], function() {
+/*
+axbt_.addCommand(['weather', 'what is the current weather', 'current weather'], function() {
 	if (State.BotActive) 
 	{
-		getJSON(API_LINK_WEATHER_TODAY, function(err, data) {
-		  	if (data != null)
-		  		talk('It is currently ' + data.current_observation.feelslike_c + ' degrees.', 'With a ' + data.current_observation.weather.toLowerCase() + ' sky.');
-		});
-	}
-	State.Home = false;
-});*/
+		var API_LINK_WEATHER_TODAY = '';
 
-axbt_.addCommand(['inspire', 'inspire me', 'give me a quote', 'no problem'], function() {
+		axbt_.getJSON(API_LINK_WEATHER_TODAY, function(err, data) {
+		  	if (data != null)
+		  		axbt_.talk('It is currently ' + data.current_observation.feelslike_c + ' degrees.', 'With a ' + data.current_observation.weather.toLowerCase() + ' sky.');
+		});
+
+		State.Home = false;
+	}
+});
+*/
+
+axbt_.addCommand(['inspire', 'inspire me', 'give me a quote', 'tell me a quote'], function() {
 	if (State.BotActive) 
 	{
-		getJSON(API_LINK_QUOTE_OF_THE_DAY, function(err, data) {
+		var API_LINK_QUOTE_OF_THE_DAY = 'http://quotes.rest/qod.json?category=inspire';
+
+		axbt_.getJSON(API_LINK_QUOTE_OF_THE_DAY, function(err, data) {
 		  	if (data != null)
-				talk("\"" + data.contents.quotes[0].quote + "\"", ' - ' +  data.contents.quotes[0].author);
+				axbt_.talk('"' + data.contents.quotes[0].quote + '"', ' - ' +  data.contents.quotes[0].author);
 		});
+
 		State.Home = false;
 	}
 });
@@ -64,7 +75,7 @@ axbt_.addCommand('wake up', function() {
 		State.Startup = true;
 	}
 	else {
-		talk(['I\'m awake.', 'I\'m already awake!', 'I\'m awake already did you not know?!']);
+		axbt_.talk(['I\'m awake.', 'I\'m already awake!', 'I\'m awake already did you not know?!']);
 	}
 });
 
