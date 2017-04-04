@@ -75,7 +75,7 @@ Apex Settings
 var ApexSettings = 
 {
 	Audio : {
-		Startup_sound : './js/audio/sample.mp3'
+		Startup_sound : ''
 	},
 	Speaking: { 
 		General : {
