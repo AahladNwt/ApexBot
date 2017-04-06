@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/Software%20state-Alpha-brightgreen.svg" alt="GitHub license" data-canonical-src="https://img.shields.io/badge/Software%20state-Alpha-brightgreen.svg" style="max-width:100%;"> <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="GitHub license" data-canonical-src="https://img.shields.io/github/license/mashape/apistatus.svg" style="max-width:100%;">
+
 # ApexBot
 
 ### Current features
